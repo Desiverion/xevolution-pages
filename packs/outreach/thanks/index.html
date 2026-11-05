@@ -118,5 +118,14 @@ footer.site nav a:hover{color:var(--amber);border-bottom-color:var(--amber)}
   </div>
 </footer>
 
+<!-- xevolution.biz analytics: thanks-page visit counter. A proxy for purchases, not a ledger:
+     refreshes and revisits count. Fire-and-forget, no cookie, silent on any failure. -->
+<script>
+(function(){
+  try{
+    fetch("https://abacus.jasoncameron.dev/hit/xevolution.biz/outreach-thanks-view",{method:"GET",mode:"cors",keepalive:true,credentials:"omit",cache:"no-store"}).catch(function(){});
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
