@@ -145,7 +145,7 @@ footer.site nav a:hover{color:var(--amber);border-bottom-color:var(--amber)}
     </div>
 
     
-    <a class="cta" href="https://buy.stripe.com/9B6fZj1NddSXgEJ26n5Rm0g" rel="noopener">Get the pack for $27</a>
+    <a class="cta" href="https://buy.stripe.com/9B6fZj1NddSXgEJ26n5Rm0g" onclick="return window.xevoCta?window.xevoCta():true" rel="noopener">Get the pack for $27</a>
     <p class="cta-sub">Secure checkout. Pack files land on the delivery page right after payment.</p>
 
     <p class="refund">If the pack is not in your hands within 24 hours, full refund on request. One email to <a href="mailto:support@xevolution.biz">support@xevolution.biz</a>, the word refund, done.</p>
@@ -219,7 +219,7 @@ I write the sentence your buyer needs to read. If you want to see what yours wou
     <p>If the first email did not make you want to send it, close this tab and keep your money. If it did, the other twenty-nine are the same quality and they are waiting behind the button.</p>
     <p style="margin-top:24px">
       
-      <a class="cta" href="https://buy.stripe.com/9B6fZj1NddSXgEJ26n5Rm0g" rel="noopener">Get the pack for $27</a>
+      <a class="cta" href="https://buy.stripe.com/9B6fZj1NddSXgEJ26n5Rm0g" onclick="return window.xevoCta?window.xevoCta():true" rel="noopener">Get the pack for $27</a>
     </p>
     <p class="cta-sub">Delivered on the page right after payment. No subscription. No upsell at checkout.</p>
   </section>
@@ -236,5 +236,22 @@ I write the sentence your buyer needs to read. If you want to see what yours wou
   </div>
 </footer>
 
+<!-- xevolution.biz analytics: outreach visit counter. Fire-and-forget, no cookie, no storage, silent on any failure. -->
+<script>
+(function(){
+  try{
+    fetch("https://abacus.jasoncameron.dev/hit/xevolution.biz/outreach-view",{method:"GET",mode:"cors",keepalive:true,credentials:"omit",cache:"no-store"}).catch(function(){});
+  }catch(e){}
+})();
+</script>
+<!-- xevolution.biz analytics: CTA click counter. Always returns true; no default action is cancelled; the href navigates with JS off. -->
+<script>
+window.xevoCta=function(){
+  try{
+    fetch("https://abacus.jasoncameron.dev/hit/xevolution.biz/outreach-cta-click",{method:"GET",mode:"cors",keepalive:true,credentials:"omit",cache:"no-store"}).catch(function(){});
+  }catch(e){}
+  return true;
+};
+</script>
 </body>
 </html>
